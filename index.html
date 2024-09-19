@@ -18,7 +18,6 @@
         <button onclick="searchPokemon()">Buscar</button>
     </div>
     
-
     <!-- Selector para buscar Pokémon por tipo -->
     <div class="type-container">
         <select id="pokemon-type">
@@ -39,7 +38,28 @@
         <button onclick="searchByType()">Buscar por Tipo</button>
     </div>
 
+    <!-- Contenedor para mostrar los Pokémon -->
     <div id="pokemon-container"></div>
+
+    <h1>Batalla_Versus</h1>
+    
+    <!-- Sección para seleccionar los Pokémon para el versus -->
+    <div class="versus-container">
+        <div>
+            <label for="pokemon1-select">Selecciona Pokémon 1:</label>
+            <select id="pokemon1-select" onchange="showPokemonDetails('pokemon1')"></select>
+            <div id="pokemon1-details"></div> <!-- Contenedor para mostrar detalles de Pokémon 1 -->
+        </div>
+        <div>
+            <label for="pokemon2-select">Selecciona Pokémon 2:</label>
+            <select id="pokemon2-select" onchange="showPokemonDetails('pokemon2')"></select>
+            <div id="pokemon2-details"></div> <!-- Contenedor para mostrar detalles de Pokémon 2 -->
+        </div>
+        <button onclick="comparePokemon()">Comparar</button>
+    </div>
+
+    <!-- Contenedor para mostrar el resultado de la comparación -->
+    <div id="versus-result"></div>
     
     <script src="script.js"></script>
 </body>

@@ -100,6 +100,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 20px; /* Agregar un padding inferior para evitar que otros elementos se solapen */
 }
 
 /* Imagen alineada a la izquierda */
@@ -109,4 +110,63 @@ button:hover {
     max-width: 1000px;
     border-radius: 50%;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la sección de versus */
+.versus-container {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.versus-container select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    outline: none;
+    background-color: #fff;
+}
+
+.versus-container button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.versus-container button:hover {
+    background-color: #218838;
+}
+
+/* Estilos para el contenedor de resultados del versus */
+#versus-result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos para la sección de detalles de los Pokémon */
+#pokemon1-details, #pokemon2-details {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pokemon1-details img, #pokemon2-details img {
+    width: 150px;
+    height: 150px;
+}
+
+.winner {
+    color: #28a745;
+}
+
+.loser {
+    color: #dc3545;
 }
