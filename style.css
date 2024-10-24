@@ -1,19 +1,27 @@
 /* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    color: #333;
+    font-family: 'Poppins', sans-serif; /* Cambié la tipografía a algo más moderno */
+    background: linear-gradient(135deg, #ffecd2, #fcb69f); /* Gradiente cálido para más originalidad */
+    color: #2c3e50;
     text-align: center;
     padding: 20px;
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Encabezado */
 h1 {
-    font-size: 48px;
-    color: #333;
+    font-size: 50px;
+    color: #e74c3c;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    letter-spacing: 1px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Sombras más llamativas */
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase; /* Estilo de texto en mayúsculas */
 }
 
 /* Estilos para el buscador */
@@ -22,85 +30,90 @@ h1 {
 }
 
 #pokemon-search, #pokemon-type {
-    padding: 12px 18px;
-    font-size: 18px;
-    border: 2px solid #007bff;
-    border-radius: 30px;
+    padding: 14px 20px;
+    font-size: 20px;
+    border: 2px solid #8e44ad; /* Cambié a un color más vibrante */
+    border-radius: 50px;
     outline: none;
-    width: 300px;
-    max-width: 90%;
+    width: 320px;
     background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 #pokemon-search:focus, #pokemon-type:focus {
-    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
-    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(142, 68, 173, 0.4); /* Sombra morada más pronunciada */
+    transform: scale(1.05); /* Añade un pequeño efecto de zoom */
 }
 
 button {
-    padding: 12px 24px;
-    background-color: #007bff;
+    padding: 14px 28px;
+    background-color: #2980b9;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     border: none;
-    border-radius: 30px;
+    border-radius: 50px;
     cursor: pointer;
     margin-left: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+    background-color: #1abc9c;
+    transform: translateY(-3px); /* Efecto de elevación más pronunciado */
+    box-shadow: 0 8px 25px rgba(26, 188, 156, 0.4);
 }
 
 /* Estilos para la tarjeta de Pokémon */
 .pokemon-card {
     display: inline-block;
-    background: linear-gradient(135deg, #ffffff, #f8f9fa);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    padding: 20px;
+    background: linear-gradient(135deg, #fff, #ecf0f1); /* Gradiente suave */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 25px;
     text-align: center;
-    width: 250px;
-    margin: 20px;
+    width: 260px;
+    margin: 25px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .pokemon-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
 .pokemon-card img {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
     transition: transform 0.3s ease;
+    border-radius: 50%; /* Bordes redondeados */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .pokemon-card img:hover {
-    transform: scale(1.1);
+    transform: rotate(10deg) scale(1.2); /* Rotación divertida al hover */
 }
 
 .pokemon-name {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
-    margin-top: 10px;
-    color: #007bff;
+    margin-top: 15px;
+    color: #e67e22;
     text-transform: capitalize;
+    letter-spacing: 1px;
 }
 
+/* Contenedor principal de los Pokémon */
 #pokemon-container {
-    margin-top: 40px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 20px; /* Agregar un padding inferior para evitar que otros elementos se solapen */
+    padding-bottom: 20px;
 }
 
 /* Imagen alineada a la izquierda */
@@ -108,65 +121,72 @@ button:hover {
     float: left;
     margin-right: 20px;
     max-width: 1000px;
-    border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  
 }
 
 /* Estilos para la sección de versus */
 .versus-container {
-    margin: 20px;
+    margin: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 .versus-container select {
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #007bff;
-    border-radius: 10px;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #e67e22;
+    border-radius: 15px;
     outline: none;
     background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.versus-container select:hover {
+    border-color: #f39c12;
 }
 
 .versus-container button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #28a745;
+    padding: 12px 25px;
+    font-size: 20px;
+    background-color: #27ae60;
     color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 50px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .versus-container button:hover {
-    background-color: #218838;
+    background-color: #2ecc71;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(39, 174, 96, 0.3);
 }
 
 /* Estilos para el contenedor de resultados del versus */
 #versus-result {
-    margin-top: 20px;
-    font-size: 24px;
+    margin-top: 25px;
+    font-size: 26px;
     font-weight: bold;
-    color: #333;
+    color: #2c3e50;
 }
 
-/* Estilos para la sección de detalles de los Pokémon */
+/* Detalles del Pokémon */
 #pokemon1-details, #pokemon2-details {
-    margin-top: 20px;
+    margin-top: 25px;
     text-align: center;
 }
 
 #pokemon1-details img, #pokemon2-details img {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
 }
 
 .winner {
-    color: #28a745;
+    color: #27ae60;
 }
 
 .loser {
-    color: #dc3545;
+    color: #c0392b;
 }
